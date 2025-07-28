@@ -1,0 +1,16 @@
+# Core dependencies for ROMS grid tools
+numpy>=1.20.0
+scipy>=1.7.0
+netCDF4>=1.5.0
+matplotlib>=3.3.0
+
+# Optional dependencies for enhanced functionality
+xarray>=0.19.0,<2025.0.0  # For easier NetCDF handling
+cartopy>=0.20.0  # For advanced map projections and plotting
+shapely>=1.8.0   # For geometric operations
+
+# Development and testing dependencies (optional)
+pytest>=6.0.0
+pytest-cov>=2.0.0
+black>=21.0.0
+flake8>=3.8.0

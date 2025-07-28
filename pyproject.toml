@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roms-grid-tools"
+version = "0.1.0"
+authors = [
+    {name = "ROMS Grid Tools Contributors"},
+]
+description = "Python tools for working with ROMS nested grids"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Physics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "netCDF4>=1.5.0",
+    "matplotlib>=3.3.0",
+    "xarray>=0.19.0,<2025.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.0.0",
+    "black>=21.0.0",
+    "flake8>=3.8.0",
+]
+plotting = [
+    "cartopy>=0.20.0",
+    "shapely>=1.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hetland/roms_grid_tools"
+Repository = "https://github.com/hetland/roms_grid_tools"
+Documentation = "https://github.com/hetland/roms_grid_tools"
+"Bug Tracker" = "https://github.com/hetland/roms_grid_tools/issues"
+
+[project.scripts]
+roms-contact = "roms_grid_tools.contact:main"
+
+[tool.setuptools.packages.find]
+include = ["roms_grid_tools*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
