@@ -128,7 +128,7 @@ print(f"Grid dimensions: {grid['Lp']} x {grid['Mp']}")
 
 # Compute grid metrics
 pm, pn, dndx, dmde = grid_metrics(grid)
-print(f"Grid spacing range: {1/pm.max():.1f} - {1/pm.min():.1f} m")
+print(f"Grid spacing range in xi dimension: {1/pm.max():.1f} - {1/pm.min():.1f} m")
 ```
 
 ### Interpolation Weights
@@ -186,21 +186,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Original MATLAB implementation from the COAWST project
+- Original MATLAB implementation from the COAWST project, with contributions from John Warner and Hernan Arrango.
 - ROMS/TOMS community for the original algorithms
-- Contributors to the Python translation
+- Contributors to the Python translation: Rob Hetland with Claude Sonnet 4.0
 
 ## Related Projects
 
 - [ROMS](https://www.myroms.org/): Regional Ocean Modeling System
 - [COAWST](https://github.com/DOI-USGS/COAWST): Coupled Ocean-Atmosphere-Wave-Sediment Transport modeling system
-- [pyroms](https://github.com/ESMG/pyroms): Python tools for ROMS
-
-## Citation
-
-If you use this software in your research, please cite:
-
-```
-ROMS Grid Tools: Python tools for ROMS nested grids (2025)
-https://github.com/hetland/roms_grid_tools
-```
+- [xroms](https://github.com/xoceanmodel/xroms): Python tools for ROMS using xarray/xgcm
