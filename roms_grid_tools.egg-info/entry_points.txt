@@ -1,0 +1,2 @@
+[console_scripts]
+roms-contact = roms_grid_tools.contact:main
